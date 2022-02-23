@@ -17,52 +17,82 @@
 
 </head>
 <body>
-    <main class="bg-primary">
-            <div class="container-fluid  text-white">
+    <main>
+            <div class="container-fluid  ">
                 <div class="row">
                     <div class="col-12 text-center">
                         <h1> CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
                     </div>
                 </div>
-                <div class="row text-center text-dark bg-success ">
-                    <div class="col-4">
-                        <h3>Nome cognome</h3>
+                <div class="box-1  ">
+                    <div class="row text-center text-dark bg-success ">
+                        <div class="col-4">
+                            <h3>Nome cognome</h3>
+                            <input id="nome" type="text">
+                        
+                        </div>
+                        <div class="col-4">
+                            <h3>km da percorrere</h3>
+                            <input id="number" type="number">
+                        </div>
+                            <div class="col-4">
+                                <h3>fascia d'età</h3>
+                                <div class="input-group mb-3">
+                                    <select class="form-select" id="inputGroupSelect03" aria-label="Example select with button addon">
+                                    <option >maggiorenne</option>
+                                    <option >minorenne</option>
+                                    <option >over65</option>
+                                    
+                                    </select>
+                                </div>
+                            </div>
                     </div>
-                    <div class="col-4">
-                        <h3>km da percorrere</h3>
+                    <div class="row">
+                        <div class="col text-center my-5">
+                            <button class="btn bg-secondary btn-secondary">GENERA</button>
+                            <button class="btn bg-danger btn-danger ">RESETTA</button>
+                        </div>
                     </div>
-                    <div class="col-4">
-                        <h3>fascia d'età</h3>
-                    </div>
+                    
                 </div>
-                <div class="row my-5">
-                    <div class="col-12 text-center">
-                        <h1>IL TUO BIGLIETTO</h1>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col bg-white text-dark">
-                        <h3>DETTAGLIO PASSEGGERI</h3>
-                        <div class="row row-cols-5">
-                            <div class="col">
-                                <h5>NOME PASSEGGERO</h5>
+            </div>
+            <div class="container-fluid">
+                <div class="box-2">
+                    <div class="row bg-success">
+                        <div class="row my-5">
+                            <div class="col-12 text-center">
+                                <h1>IL TUO BIGLIETTO</h1>
                             </div>
-                            <div class="col">
-                                <h5>OFFERTA</h5>
-                            </div>
-                            <div class="col">
-                                <h5>CARROZZA</h5>
-                            </div>
-                            <div class="col">
-                                <h5>CODICE CP</h5>
-                            </div>
-                            <div class="col">
-                                <h5>COSTO BIGLIETTO</h5>
+                        </div>
+                        <div class="col text-dark">
+                            <h3>DETTAGLIO PASSEGGERI</h3>
+                            <div class="row row-cols-5 p-3">
+                                <div class="col">
+                                    <h5>NOME PASSEGGERO</h5>
+                                    <p id="passegero"></p>
+                                </div>
+                                <div class="col">
+                                    <h5>OFFERTA</h5>
+                                    <p id="offering"></p>
+                                </div>
+                                <div class="col">
+                                    <h5>CARROZZA</h5>
+                                    <p id="carrozza"></p>
+                                </div>
+                                <div class="col">
+                                    <h5>CODICE CP</h5>
+                                </div>
+                                <div class="col">
+                                    <h5>COSTO BIGLIETTO</h5>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+             
+         
+               
     </main>
     <script type="text/javascript" src="js/main.js" ></script>
 </body>
