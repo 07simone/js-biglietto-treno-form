@@ -31,8 +31,16 @@
 
             let outputcost = document.getElementById("totale")
             outputcost.innerHTML = (`${prezzoBiglietto.toFixed(2)} €`);
+
+            randomCodiceCp();
+
+            randomNumbercarriage();
+
+            offerta();
         }
     )
+
+    
 
 
     const ticketReset = document.getElementById("button-reset");
@@ -46,4 +54,25 @@
 
         let outputcost = document.getElementById("totale")
         outputcost.innerHTML = (`${prezzoBiglietto.toFixed(2)} €`);
+
+        let outputCodice = document.getElementById("codice")
+        outputCodice.innerHTML = ""
+
+        let outputCarriage = document.getElementById("carrozza")
+        outputCarriage.innerHTML = ""
     });
+
+    function randomCodiceCp(){
+        let outputCodice = document.getElementById("codice")
+        outputCodice.innerHTML = (`${Math.floor(Math.random() * 1000)}`);
+    }
+
+    function randomNumbercarriage(){
+        let outputCarriage = document.getElementById("carrozza")
+        outputCarriage.innerHTML = (`${Math.floor(Math.random() * 10)}`);
+    }
+
+    function offerta(){
+        let outputOfferta = document.getElementById("offering")
+        outputOfferta.innerHTML = (`${userAge.value}`);
+    }
