@@ -53,23 +53,40 @@
         output.innerHTML = (`${userName.value}`);
 
         let outputcost = document.getElementById("totale")
-        outputcost.innerHTML = (`${prezzoBiglietto.toFixed(2)} €`);
+        if(userName.value == "" || userAge.value == "" || userDistance.value == ""){
+            outputcost.innerHTML = "0 €"
+        }else{
+            outputcost.innerHTML = (`${prezzoBiglietto.toFixed(2)} €`);
+        }
+        
 
         let outputCodice = document.getElementById("codice")
         outputCodice.innerHTML = ""
 
         let outputCarriage = document.getElementById("carrozza")
         outputCarriage.innerHTML = ""
+
+        let outputOfferta = document.getElementById("offering")
+        outputOfferta.innerHTML = ""
     });
 
     function randomCodiceCp(){
         let outputCodice = document.getElementById("codice")
-        outputCodice.innerHTML = (`${Math.floor(Math.random() * 1000)}`);
+        if(userName.value == "" || userAge.value == "" || userDistance.value == ""){
+            outputCodice.innerHTML = "Codice non disponibile"
+        }else{
+            outputCodice.innerHTML = (`${Math.floor(Math.random() * 1000)}`);
+        }
+        
     }
 
     function randomNumbercarriage(){
         let outputCarriage = document.getElementById("carrozza")
-        outputCarriage.innerHTML = (`${Math.floor(Math.random() * 10)}`);
+        if(userName.value == "" || userAge.value == "" || userDistance.value == ""){
+            outputCarriage.innerHTML = "Carrozza non disponibile"
+        }else{
+            outputCarriage.innerHTML = (`${Math.floor(Math.random() * 10)}`);
+        }
     }
 
     function offerta(){
